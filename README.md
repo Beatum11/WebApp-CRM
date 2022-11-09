@@ -19,3 +19,4 @@ I used in this project:
 - Identity Framework
 - Entity Framework
 - MS SQL
+- RESTful API

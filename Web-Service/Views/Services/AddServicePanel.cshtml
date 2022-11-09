@@ -1,0 +1,26 @@
+﻿@model Service;
+
+<h2 class="title">Add a Service</h2>
+
+<div class="row">
+	<div class="col-6">
+	<form asp-controller="Services" asp-action="AddService">
+		<div>
+		<label class="form-label">Headline of the service</label>
+		<input asp-for="@Model.Name" type ="text" class="form-control"/>
+		</div>
+
+		<div>
+		<label class="form-label">Service description</label>
+		<input asp-for="@Model.Description"  type ="text" class="form-control"/>
+		</div>
+
+		<div>
+		<button type="submit" class="btn btn-outline-primary">
+			Add
+		</button>
+		</div>
+
+	 </form>
+	</div>
+ </div>

@@ -1,0 +1,32 @@
+﻿@model BlogPost;
+
+<h2 class="title">Add a Post</h2>
+
+<div class="row">
+	<div class="col-6">
+	<form asp-controller="Blog" asp-action="AddPost">
+		<div>
+		<label class="form-label"> Add a headline </label>
+		<input asp-for="@Model.HeadLine" type ="text" class="form-control"/>
+		</div>
+
+		<div>
+		<label class="form-label">Add an image</label>
+		<input asp-for="@Model.Image"  type ="text" class="form-control"/>
+		</div>
+
+		<div>
+		<label class="form-label">Add a text</label>
+		<input asp-for="@Model.Text"  type ="text" class="form-control"/>
+		</div>
+
+		<div>
+		<button type="submit" class="btn btn-outline-primary">
+			Add a post
+		</button>
+		</div>
+
+	 </form>
+	</div>
+ </div>
+

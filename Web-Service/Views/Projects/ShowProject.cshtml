@@ -1,0 +1,27 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@inject SignInManager<IdentityUser> signInManager;
+@inject UserManager<IdentityUser> userManager;
+
+@model Project;
+
+
+<main>
+    <section>
+        <h1>@Model.HeadLine</h1>
+        <br />
+        <article>
+            <p>
+                @Model.Text;
+            </p>
+        </article>
+
+        @if (userManager.GetUserName(User) == "admin1")
+        {
+              <a asp-controller="Projects" asp-action="DeleteProject"
+               asp-route-id="@Model.Id" class="btn btn-primary">
+                Delete
+              </a>
+        }
+    </section>
+</main>
+

@@ -1,0 +1,31 @@
+﻿@model Project;
+
+<h2 class="title">Add a Project</h2>
+
+<div class="row">
+	<div class="col-6">
+	<form asp-controller="Projects" asp-action="AddProject">
+		<div>
+		<label class="form-label"> Add a headline </label>
+		<input asp-for="@Model.HeadLine" type ="text" class="form-control"/>
+		</div>
+
+		<div>
+		<label class="form-label">Add an image</label>
+		<input asp-for="@Model.Image"  type ="text" class="form-control"/>
+		</div>
+
+		<div>
+		<label class="form-label">Add a text</label>
+		<input asp-for="@Model.Text"  type ="text" class="form-control"/>
+		</div>
+
+		<div>
+		<button type="submit" class="btn btn-outline-primary">
+			Add a project
+		</button>
+		</div>
+
+	 </form>
+	</div>
+ </div>

@@ -1,0 +1,46 @@
+﻿@model Client;
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body class="main-page-body">
+    <div class="main-page-container">
+
+    <div class="main-page-firstPart">
+        <h1>Consulting for everyone.</h1>
+        <h1 style="margin-top: 0px;">For free.</h1>
+    </div>
+
+
+        <div id="form" style="text-align: center">
+        <form asp-action="AddClient" asp-controller="Main">
+          <div class="mb-3">
+            <label asp-for="Name" class="form-label">Name</label>
+            <input asp-for="Name" type="text" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label asp-for="Email" for="exampleInputEmail1" class="form-label">Email address</label>
+            <input asp-for="Email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label asp-for="Message" class="form-label">Your message</label>
+            <input asp-for="Message" type="text" class="form-control"/>
+          </div>
+          <button type="submit" class="btn btn-outline-primary btn-lg">
+           Submit an application 
+          </button>
+        </form>
+        </div>
+    </div>
+
+
+    </body>
+</html>
+
+
+
+

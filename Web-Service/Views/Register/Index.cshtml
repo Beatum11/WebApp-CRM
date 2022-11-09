@@ -1,0 +1,33 @@
+﻿@model UserData;
+
+<form asp-controller="Register" asp-action="Registration" method="post" >
+  <div class="row mb-3">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input asp-for="Email" type="email" class="form-control" id="inputEmail3">
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label class="col-sm-2 col-form-label">Name</label>
+    <div class="col-sm-10">
+      <input asp-for="UserName" type="text" class="form-control" id="inputPassword3">
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-10">
+      <input asp-for="Password" type="password" class="form-control" id="inputPassword3">
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Confirm Password</label>
+    <div class="col-sm-10">
+      <input asp-for="ConfirmPassword" type="password" class="form-control" id="inputPassword3">
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Register</button>
+</form>
+
+
+
+

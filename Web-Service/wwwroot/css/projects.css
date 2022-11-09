@@ -1,0 +1,30 @@
+﻿
+
+.section-projects{
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 50vh;
+}
+
+.img-projects{
+    max-width: 300px;
+    max-height: 250px;
+}
+
+.list-projects{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+}
+
+.list-projects:not(last-child){
+        gap: 4rem;
+}
+
+.figcap-projects {
+    background-color: lightskyblue;
+    font-size: 20px;
+}
+

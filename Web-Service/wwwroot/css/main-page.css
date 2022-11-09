@@ -1,0 +1,30 @@
+﻿body{
+    margin: 0;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.flex-grow-right{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-page-body {
+    background-color: white;
+}
+
+.main-page-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100vh;
+
+}
+
+.main-page-firstPart {
+    text-align: center;
+}
+
+h1{
+    margin-top: 40px;
+    color: black;
+}

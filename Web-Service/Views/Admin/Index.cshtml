@@ -1,0 +1,52 @@
+﻿@model List<Client>;
+
+<h2 class="title">Admin panel</h2>
+<br />
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Message</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+      @foreach(var client in Model){
+          <tr>
+          <th scope="row">@client.Id</th>
+          <td>@client.Name</td>
+          <td>@client.Email</td>
+          <td>@client.Message</td>
+          <td>
+           <a asp-controller="Admin"
+              asp-action="EditPanel" asp-route-id="@client.Id" class="btn btn-primary">
+              Edit
+           </a>  
+            <a asp-controller="Admin"
+              asp-action="DeleteClient" asp-route-id="@client.Id" class="btn btn-primary">
+               Delete
+            </a> 
+          </td>
+        </tr>
+      }
+
+      <a asp-controller="Projects"
+       asp-action="AddProjectPanel" class="btn btn-primary">
+         Add a Project
+       </a>
+
+       <a asp-controller="Services"
+       asp-action="AddServicePanel" class="btn btn-primary">
+         Add a Service
+       </a>
+
+      <a asp-controller="Blog"
+       asp-action="AddPostPanel" class="btn btn-primary">
+         Add a Post
+       </a>
+  </tbody>
+</table>
+

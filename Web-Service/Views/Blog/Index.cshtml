@@ -1,0 +1,51 @@
+﻿@model List<BlogPost>;
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <main>
+            <section class="selection-projects">
+
+                <div class="container"> 
+                    <h2 class="title">Our Blog</h2>
+                </div>
+
+               <div>
+                   <ul class="list-projects">
+                @foreach(var post in Model){
+                   <div class="card" style="width: 18rem;">
+                      <img src="@post.Image" 
+                       class="card-img-top">
+                       <div class="card-body">
+                        <h5 class="card-title"><strong>@post.HeadLine</strong></h5>
+
+                        <p class="card-text">@post.Synopsis</p>
+
+                         <a asp-action="ShowPost" asp-controller="Blog"
+                          asp-route-id="@post.Id"
+                          class="btn btn-primary">
+                          See more
+                        </a>
+
+                       </div>
+                    </div>
+                }
+                </ul>
+               </div>
+            
+                
+
+            </section>
+        </main>
+    </body>
+</html>
+   
+
+
+
+

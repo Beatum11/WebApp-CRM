@@ -1,0 +1,25 @@
+html {
+  font-size: 18px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.title {
+    border-bottom: 1px solid;
+    border-color: black;
+    margin-bottom: 30px;
+}
+
+
+p{
+    font-size: 19px;
+}

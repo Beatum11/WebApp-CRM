@@ -1,0 +1,38 @@
+﻿@model List<Project>;
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+  <body>
+   <main>
+    <section class="section-projects">
+        <div class="container"> 
+            <h2 class="title">Projects</h2>
+        </div>
+
+        <div>
+          <ul class="list-projects">
+            @foreach (var project in Model)
+            {
+              <div class="card" style="width: 18rem;">
+                <img src="@project.Image" 
+                 class="card-img-top">
+                   <div class="card-body">
+                     <h5 class="card-title"><strong>@project.HeadLine</strong></h5>
+                      <a asp-action="ShowProject" asp-controller="Projects"
+                          asp-route-id="@project.Id" class="btn btn-primary">See more</a>
+                   </div>
+              </div>
+            }
+          </ul>
+        </div>
+    </section>
+    </main>
+
+ </body>
+</html>
+
+
+

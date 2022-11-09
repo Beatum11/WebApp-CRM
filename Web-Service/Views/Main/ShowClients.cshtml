@@ -1,0 +1,12 @@
+﻿@model List<Client>;
+
+<h1>ShowClients</h1>
+
+<ul>
+    @foreach (var client in Model)
+    {
+       <h3>@client.Message</h3>
+    }
+
+</ul>
+   
